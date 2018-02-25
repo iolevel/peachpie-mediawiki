@@ -1,5 +1,7 @@
 <img src="https://www.rosehosting.com/blog/wp-content/uploads/2015/04/mediawiki.png" width="200"/>
 
+>*Note*: for now, we are only using this repository to provide the project files. Eventually, the whole sample will be placed here.
+
 ## MediaWiki on .NET (Core)  
 The goal of this sample is to fully compile the MediaWiki project into .NET/.NET Core.
 
