@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFrameworks>net46</TargetFrameworks>
+    <AssemblyName>mediawiki</AssemblyName>
+    <NoWarn>PHPX0125,PHP3012</NoWarn>
+    <OutDir>Bin</OutDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile
+      Include="**/*.php"
+      Exclude="tests/**;**/tests/**;maintenance/**;includes/debug/logger/monolog/**;vendor\psr\log\Psr\Log\Test\**;skins\Vector\vendor\composer\installers/**;vendor\wikimedia\composer-merge-plugin\**;vendor\cssjanus\cssjanus\test/**;vendor\liuggio/statsd-php-client\src\Liuggio\StatsdClient\Monolog/**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Peachpie.Compiler.Tools" Version="0.9.0-CI00828" />
+    <PackageReference Include="Peachpie.NET.Sdk" Version="0.9.0-CI00828" PrivateAssets="Build" />
+    <PackageReference Include="Peachpie.Library.Graphics" Version="0.9.0-CI00828" />
+    <PackageReference Include="Peachpie.RequestHandler" Version="0.9.0-CI00828" />
+  </ItemGroup>
+</Project>
