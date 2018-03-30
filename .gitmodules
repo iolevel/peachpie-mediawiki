@@ -1,0 +1,4 @@
+[submodule "mediawiki"]
+	path = mediawiki
+	url = https://github.com/iolevel/mediawiki.git
+	branch = master
