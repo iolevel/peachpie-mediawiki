@@ -1,0 +1,4 @@
+# Visual Studio directories
+.vs
+server/bin
+server/obj
