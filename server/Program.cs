@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Rewrite;
@@ -11,7 +12,7 @@ namespace Website.Server
     {
         static void Main(string[] args)
         {
-            var root = System.IO.Directory.GetCurrentDirectory() + "/mediawiki";
+            var root = System.IO.Directory.GetCurrentDirectory() + "/../mediawiki";
 
             var host = WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
@@ -34,7 +35,7 @@ namespace Website.Server
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
-                options.CookieHttpOnly = true;
+                options.Cookie.HttpOnly = true;
             });
         }
 
