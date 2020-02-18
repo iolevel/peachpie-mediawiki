@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.DependencyInjection;
-using Peachpie.Web;
 
 namespace Website.Server
 {
@@ -14,10 +13,9 @@ namespace Website.Server
         {
             var root = System.IO.Directory.GetCurrentDirectory() + "/mediawiki";
 
-            var host = new WebHostBuilder()
-                .UseKestrel()
-                .UseUrls("http://*:5004/")
+            var host = WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls("http://*:5004/")
                 .UseWebRoot(root)
                 .UseContentRoot(root)
                 .Build();
