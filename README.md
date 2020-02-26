@@ -24,7 +24,7 @@ This repository contains our forks of MediaWiki sources as a set of nested Git s
 Therefore, either get all the submodules during the `clone` operation:
 
 ```
-git clone --recurse-submodules https://github.com/roberthusak/peachpie-mediawiki.git
+git clone --recurse-submodules https://github.com/iolevel/peachpie-mediawiki.git
 ```
 
 Or download them afterwards:
