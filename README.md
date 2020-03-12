@@ -37,7 +37,7 @@ The `mediawiki.msbuildproj` project can be built either for .Net Core and run un
 
 ### Kestrel
 
-The first option includes compiling MediaWiki as `netcoreapp2.0` and using it from the `server.csproj` project.
+The first option includes compiling MediaWiki as `netcoreapp3.0` and using it from the `server.csproj` project.
 To do that, run the following command in the directory where the `peachpie-mediawiki.sln` file is located:
 
 ```
