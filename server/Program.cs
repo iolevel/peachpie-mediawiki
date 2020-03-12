@@ -47,7 +47,7 @@ namespace Website.Server
 
             app.UseSession();
 
-            app.UsePhp(new PhpRequestOptions(scriptAssemblyName: "mediawiki"));
+            app.UsePhp(new PhpRequestOptions(scriptAssemblyName: typeof(MediaWikiSite).Assembly.FullName));
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
